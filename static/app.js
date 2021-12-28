@@ -1,4 +1,4 @@
-const host = 'http://0.0.0.0:5050'
+const host = 'https://randomall.tk'
 let passButton = document.getElementById('generate_psw_btn')
 passButton.onclick = async function (){
     let number_switch = document.getElementById('numbers_switch').querySelector('input')
@@ -7,6 +7,7 @@ passButton.onclick = async function (){
 
     const url = host + `/password?length=${length.value}&is_number=${number_switch.checked}&is_spec_symbol=${spec_symbols.checked}`
 
+    let pass;
     try {
         const response = await fetch(url, {
             method: 'GET',
@@ -28,7 +29,7 @@ passButton.onclick = async function (){
 
         let psw_safety = document.getElementById('psw_safety_div')
         psw_safety.style.width = safety + '%'
-        console.log(safety)
+
         if (safety > 0 && safety < 40)
             psw_safety.style.background = 'red'
         if (safety >= 40 && safety < 75)
@@ -36,8 +37,19 @@ passButton.onclick = async function (){
         if (safety >= 75 && safety <= 100)
             psw_safety.style.background = 'green'
 
-        psw_input.value = 'alkfgalsdmka;slkg'
+        pass = 'alkfgalsdmka;slkg'
+
+        psw_input.value = pass
+        psw_input.select()
+        document.execCommand('copy')
     } catch (error) {
         console.error('Ошибка:', error)
     }
+}
+
+let copyButton = document.getElementById('copy')
+copyButton.onclick = function (){
+    let psw_input = document.getElementById('psw_input')
+    psw_input.select()
+    document.execCommand('copy')
 }

@@ -1,1 +1,2 @@
-HOST = 'http://0.0.0.0:5050'
+HOST = 'https://randomall.tk'
+HOST_API = f'{HOST}/api'
