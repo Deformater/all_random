@@ -1,4 +1,4 @@
-const host = 'https://randomall.tk'
+const host = 'https://api.randomall.tk'
 let passButton = document.getElementById('generate_psw_btn')
 passButton.onclick = async function (){
     let number_switch = document.getElementById('numbers_switch').querySelector('input')
@@ -9,9 +9,9 @@ passButton.onclick = async function (){
 
     let pass;
     try {
-        const response = await fetch(url, {
-            method: 'GET',
-        })
+        // const response = await fetch(url, {
+        //     method: 'GET',
+        // })
         // let data = response.json()
         // let pass = data['password']
         let psw_input = document.getElementById('psw_input')
@@ -48,7 +48,7 @@ passButton.onclick = async function (){
 }
 
 let copyButton = document.getElementById('copy')
-copyButton.onclick = function (){
+copyButton.onclick = async function (){
     let psw_input = document.getElementById('psw_input')
     psw_input.select()
     document.execCommand('copy')
