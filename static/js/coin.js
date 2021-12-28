@@ -4,12 +4,11 @@ flipCoinButton.onclick = async function (){
     const url = host + '/coin'
 
     try {
-        // const response = await fetch(url, {
-        //     method: 'GET',
-        // })
-        // let data = response.json()
-        // let coin = data['coin']
-        let coin = false
+        const response = await fetch(url, {
+            method: 'GET',
+        })
+        let data = response.json()
+        let coin = data['coin']
 
         let text_center = document.getElementById('coin_text')
         console.log(text_center)

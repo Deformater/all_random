@@ -7,13 +7,12 @@ passButton.onclick = async function (){
 
     const url = host + `/password?length=${length.value}&is_number=${number_switch.checked}&is_spec_symbol=${spec_symbols.checked}`
 
-    let pass;
     try {
-        // const response = await fetch(url, {
-        //     method: 'GET',
-        // })
-        // let data = response.json()
-        // let pass = data['password']
+        const response = await fetch(url, {
+            method: 'GET',
+        })
+        let data = response.json()
+        let pass = data['password']
         let psw_input = document.getElementById('psw_input')
         let safety = 100
         if (length.value <= 15)
@@ -36,8 +35,6 @@ passButton.onclick = async function (){
             psw_safety.style.background = 'yellow'
         if (safety >= 75 && safety <= 100)
             psw_safety.style.background = 'green'
-
-        pass = 'alkfgalsdmka;slkg'
 
         psw_input.value = pass
         psw_input.select()
