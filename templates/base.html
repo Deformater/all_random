@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RandomAll</title>
+    <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="../static/assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="../static/assets/css/styles.css">
+    <link rel="stylesheet" href="../static/assets/css/Toggle-Switch-1.css">
+    <link rel="stylesheet" href="../static/assets/css/Toggle-Switch.css">
+    <link rel="stylesheet" href="../static/assets/css/untitled.css">
+</head>
+
+<body>
+    <!-- Start: Navigation Clean -->
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#">RandomAll</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link {{ nav_item_active_dict['index'] }}" href="/index">Случайное число<br></a></li>
+                    <li class="nav-item"><a class="nav-link {{ nav_item_active_dict['password'] }}" href="/password">Генератор паролей</a></li>
+                    <li class="nav-item"><a class="nav-link {{ nav_item_active_dict['choose'] }}" href="#">Выбор победителя</a></li>
+                    <li class="nav-item"><a class="nav-link {{ nav_item_active_dict['coin'] }}" href="/coin">Подбросить монетку</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">Другие значения</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Генератор текста</a><a class="dropdown-item" href="#">Случайное ФИО</a><a class="dropdown-item" href="#">Случайное место на карте</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End: Navigation Clean -->
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="container d-xl-flex justify-content-between">
+            <p style="width: 50%;"><strong>RandomAll</strong>&nbsp;- удобный сервис для генерации случайных значений. В основе данного проекта лежит генератор случайных чисел от&nbsp;<a href="https://random.org">random.org</a>&nbsp;</p>
+            <p class="d-xl-flex justify-content-xl-end align-items-xl-end" style="color: rgb(174,174,174);font-size: 14px;font-weight: bold;">made by&nbsp;<img src="../static/assets/img/cupsoft.png" style="width: 18px;margin-right: 6px;margin-left: 24px;"><a href="https://cupsoft.ru"><strong>CupSoft</strong></a></p>
+        </div>
+    </footer>
+    <script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
