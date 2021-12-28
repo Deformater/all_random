@@ -1,7 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from flask_cors import CORS
-from settings import HOST, HOST_API
-import requests
 
 
 app = Flask(__name__)
@@ -13,7 +11,7 @@ app.config['SECRET_KEY'] = 'secret_key'
 @app.route("/index")
 def index():
     nav_item_active_dict = {'index': 'active', 'coin': '', 'password': ''}
-    return render_template('index.html', nav_item_active_dict=nav_item_active_dict)
+    return render_template('number.html', nav_item_active_dict=nav_item_active_dict)
 
 
 @app.route("/coin")
