@@ -11,6 +11,7 @@ numberButton.onclick = async function (){
             method: 'GET',
         })
         let data = response.json()
+        console.log(data)
         let number = data['number']
 
         let text = document.getElementById('print_number')

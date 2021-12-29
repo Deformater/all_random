@@ -12,6 +12,7 @@ passButton.onclick = async function (){
             method: 'GET',
         })
         let data = response.json()
+        console.log(data)
         let pass = data['password']
         let psw_input = document.getElementById('psw_input')
         let safety = 100
