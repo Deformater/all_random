@@ -13,7 +13,7 @@ flipCoinButton.onclick = async function (){
         let text_center = document.getElementById('coin_text')
         console.log(text_center)
         if (coin)
-            text_center.innerHTML = 'ОРЁЛ'
+            text_center.innerHTML = 'ОРЁЛ' 
         else
             text_center.innerHTML = 'РЕШКА'
     }
