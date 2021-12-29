@@ -11,9 +11,9 @@ passButton.onclick = async function (){
         const response = await fetch(url, {
             method: 'GET',
         })
-        let data = response.json()
-        console.log(data)
-        let pass = data['password']
+        let data = await response.json()
+        let pass = data.password
+
         let psw_input = document.getElementById('psw_input')
         let safety = 100
         if (length.value <= 15)

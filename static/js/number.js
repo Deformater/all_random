@@ -7,12 +7,9 @@ numberButton.onclick = async function (){
     const url = host + `/number?from_=${from.value}&to_=${to.value}`
 
     try {
-        const response = await fetch(url, {
-            method: 'GET',
-        })
-        let data = response.json()
-        console.log(data)
-        let number = data['number']
+        const response = await fetch(url)
+        let data = await response.json()
+        let number = data.number
 
         let text = document.getElementById('print_number')
         text.innerHTML = number + ''

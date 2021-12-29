@@ -8,7 +8,7 @@ app.config['SECRET_KEY'] = 'secret_key'
 
 
 @app.route("/")
-@app.route("/index")
+@app.route("/number")
 def index():
     nav_item_active_dict = {'index': 'active', 'coin': '', 'password': ''}
     return render_template('number.html', nav_item_active_dict=nav_item_active_dict)
