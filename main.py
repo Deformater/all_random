@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 from flask_cors import CORS
-
+import os
 
 app = Flask(__name__)
 CORS(app)
-app.config['SECRET_KEY'] = 'secret_key'
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 
 
 @app.route("/")
